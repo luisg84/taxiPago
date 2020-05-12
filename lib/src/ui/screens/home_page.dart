@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:taxi_pago_app/src/ui/widgets/avatar_home_widget.dart';
 import 'package:taxi_pago_app/src/ui/widgets/card_slide_widget.dart';
+import 'package:taxi_pago_app/src/ui/widgets/comida_menu_widget.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -17,6 +18,14 @@ class HomePage extends StatelessWidget {
               height: 28.0,
             ),
             _Recomendaciones(),
+            SizedBox(
+              height: 10.0,
+            ),
+            _Comida(),
+            SizedBox(
+              height: 10.0,
+            ),
+            _Productos()
           ]),
     );
   }
@@ -38,6 +47,50 @@ class HomePage extends StatelessWidget {
           ),
         ),
         CardSlideWidget()
+      ],
+    );
+  }
+
+  Widget _Comida() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Container(
+          margin: EdgeInsets.only(left: 17.0),
+          child: Text(
+            'Comida',
+            textAlign: TextAlign.left,
+            style: TextStyle(
+                fontSize: 20.0,
+                fontFamily: 'Avenir',
+                fontWeight: FontWeight.w600,
+                color: Color(0xFF353b50)),
+          ),
+        ),
+        ComidaMenuWidget(),
+        //CardSlideWidget()
+      ],
+    );
+  }
+
+  Widget _Productos() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Container(
+          margin: EdgeInsets.only(left: 17.0),
+          child: Text(
+            'Productos',
+            textAlign: TextAlign.left,
+            style: TextStyle(
+                fontSize: 20.0,
+                fontFamily: 'Avenir',
+                fontWeight: FontWeight.w600,
+                color: Color(0xFF353b50)),
+          ),
+        ),
+
+        //CardSlideWidget()
       ],
     );
   }

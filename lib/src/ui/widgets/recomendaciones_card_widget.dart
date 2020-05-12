@@ -26,9 +26,9 @@ class RecomendacionesCardWidget extends StatelessWidget {
           shape: BoxShape.rectangle,
           boxShadow: <BoxShadow>[
             BoxShadow(
-                color: Colors.black38,
-                blurRadius: 15.0,
-                offset: Offset(0.0, 7.0))
+                color: Color.fromARGB(60, 0, 0, 0),
+                blurRadius: 10.0,
+                offset: Offset(0.0, 0.0))
           ]),
     );
   }

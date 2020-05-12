@@ -23,11 +23,11 @@ class _NavigationBarState extends State<NavigationBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: widgetsChildren[indexTap],
-      bottomNavigationBar: _Theme2(context),
+      bottomNavigationBar: Theme2(context),
     );
   }
 
-  Widget _Theme2(BuildContext context) {
+  Widget Theme2(BuildContext context) {
     return Theme(
         data: Theme.of(context).copyWith(
             canvasColor: Color(0xFFf5f6f7), primaryColor: Colors.purple),
