@@ -41,8 +41,11 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #  - images/a_dot_burr.jpeg
+  assets:
+   - assets/img/perfilpicture.jpg
+   - assets/img/recomendacion_desayuno.png
+   - assets/img/recomendacion_comida.png
+   - assets/img/recomendacion_comida2.png
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -61,6 +64,12 @@ flutter:
     - family: Avenir
       fonts:
         - asset: assets/fonts/Avenir_Next.ttc
+        - asset: assets/fonts/Avenir_Next_Regular.otf
+
+    - family: Avenirregular
+      fonts:
+       - asset: assets/fonts/Avenir_Next.ttc
+          
 
     - family:  BottomIcons
       fonts:
