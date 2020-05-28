@@ -52,6 +52,12 @@ flutter:
    - assets/img/cat_fastfood.png
    - assets/img/cat_rest.png
    - assets/img/cat_pizza.png
+   - assets/img/cat_tienda.png
+   - assets/img/cat_farmacia.png
+   - assets/img/jaiva.jpg
+   - assets/img/logojaiva.jpg
+   - assets/img/sinimagen.jpg
+   - data/res_list.json
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

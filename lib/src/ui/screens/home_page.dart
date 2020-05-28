@@ -2,31 +2,36 @@ import 'package:flutter/material.dart';
 import 'package:taxi_pago_app/src/ui/widgets/avatar_home_widget.dart';
 import 'package:taxi_pago_app/src/ui/widgets/card_slide_widget.dart';
 import 'package:taxi_pago_app/src/ui/widgets/comida_menu_widget.dart';
+import 'package:taxi_pago_app/src/ui/widgets/productos_menu_widget.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            SafeArea(child: Container(height: 20)),
-            //Text('prueba'),
-            AvatarHomeWidget('assets/img/perfilpicture.jpg',
-                'Alejandra Ramirez', 'Cordoba Ver.'),
-            SizedBox(
-              height: 28.0,
-            ),
-            _Recomendaciones(),
-            SizedBox(
-              height: 10.0,
-            ),
-            _Comida(),
-            SizedBox(
-              height: 10.0,
-            ),
-            _Productos()
-          ]),
+      body: SingleChildScrollView(
+        child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              SafeArea(child: Container(height: 5)),
+
+              //ListView(),
+              //Text('prueba'),
+              AvatarHomeWidget('assets/img/perfilpicture.jpg',
+                  'Alejandra Ramirez', 'Cordoba Ver.'),
+              SizedBox(
+                height: 28.0,
+              ),
+              _Recomendaciones(),
+              SizedBox(
+                height: 10.0,
+              ),
+              _Comida(),
+              SizedBox(
+                height: 10.0,
+              ),
+              _Productos()
+            ]),
+      ),
     );
   }
 
@@ -89,7 +94,7 @@ class HomePage extends StatelessWidget {
                 color: Color(0xFF353b50)),
           ),
         ),
-
+        productosMenuWidget()
         //CardSlideWidget()
       ],
     );
