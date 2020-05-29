@@ -56,7 +56,10 @@ flutter:
    - assets/img/cat_farmacia.png
    - assets/img/jaiva.jpg
    - assets/img/logojaiva.jpg
-   - assets/img/sinimagen.jpg
+   - assets/img/pizzafast.jpg
+   - assets/img/logopizza.jpg
+   - assets/img/tacotaco.jpg
+   - assets/img/logotacos.jpg
    - data/res_list.json
   #  - images/a_dot_ham.jpeg
 

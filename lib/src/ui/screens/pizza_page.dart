@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taxi_pago_app/src/model/categoria_model.dart';
 import 'package:taxi_pago_app/src/providers/res-list_provider.dart';
 import 'package:taxi_pago_app/src/providers/restaurantes_provider.dart';
 import 'package:taxi_pago_app/src/ui/widgets/recomendaciones_card_widget.dart';
@@ -7,14 +8,19 @@ import 'package:taxi_pago_app/src/ui/widgets/topbar_widget.dart';
 
 class pizzaPage extends StatelessWidget {
   final restaurantesProvider = new RestaurantesProvider();
+
+  pizzaPage();
+
   @override
   Widget build(BuildContext context) {
+    final Categoria cat = ModalRoute.of(context).settings.arguments;
+    print(cat.getCategoria());
     return Scaffold(
-      body: _Barra(),
+      body: _Barra(cat.getCategoria()),
     );
   }
 
-  Widget _Barra() {
+  Widget _Barra(String categoriaName) {
     /*   resListProvider.cargarData().then((restaurantes) {
       print('_Lista');
       print(restaurantes);
@@ -35,7 +41,7 @@ class pizzaPage extends StatelessWidget {
             title: Container(
               margin: EdgeInsets.only(right: 200.0),
               child: Text(
-                'Pizzas',
+                categoriaName,
                 textAlign: TextAlign.left,
                 style: TextStyle(
                     fontSize: 14.0,

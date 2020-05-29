@@ -10,22 +10,23 @@ class ComidaMenuWidget extends StatelessWidget {
           Row(crossAxisAlignment: CrossAxisAlignment.center, children: <Widget>[
         Column(
           children: <Widget>[
-            CatComidaWidget('assets/img/cat_pizza.png', 'Pizza', 'pizza'),
-            CatComidaWidget('assets/img/cat_cafe.png', 'Café', 'cafe')
+            CatComidaWidget('assets/img/cat_pizza.png', 'Pizza', 'rest', '1'),
+            CatComidaWidget('assets/img/cat_cafe.png', 'Café', 'rest', '4')
           ],
         ),
         Column(
           children: <Widget>[
-            CatComidaWidget('assets/img/cat_tacos.png', 'Tacos', 'tacos'),
+            CatComidaWidget('assets/img/cat_tacos.png', 'Tacos', 'rest', '2'),
             CatComidaWidget(
-                'assets/img/cat_fastfood.png', 'Comida rapida', 'fastfood')
+                'assets/img/cat_fastfood.png', 'Comida rapida', 'rest', '5')
           ],
         ),
         Column(
           children: <Widget>[
             CatComidaWidget(
-                'assets/img/cat_antojitos.png', 'Antojitos', 'antojitos'),
-            CatComidaWidget('assets/img/cat_rest.png', 'Restaurant', 'rest')
+                'assets/img/cat_antojitos.png', 'Antojitos', 'rest', '3'),
+            CatComidaWidget(
+                'assets/img/cat_rest.png', 'Restaurant', 'rest', '6')
           ],
         )
       ]),

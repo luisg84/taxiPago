@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:taxi_pago_app/src/model/categoria_model.dart';
 
 class CatComidaWidget extends StatelessWidget {
   String pathImage = 'assets/img/recomendacion_desayuno.png';
-  String categoria = 'Tacos';
+  String categoriaName = 'Tacos';
   String ruta = 'tacos';
+  String catCode = '0';
+  Categoria categoria = new Categoria();
 
-  CatComidaWidget(this.pathImage, this.categoria, this.ruta);
+  CatComidaWidget(this.pathImage, this.categoriaName, this.ruta, this.catCode);
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +39,7 @@ class CatComidaWidget extends StatelessWidget {
                 child: Image(image: AssetImage(this.pathImage)),
               ),
               Text(
-                this.categoria,
+                this.categoriaName,
                 style: TextStyle(
                     fontSize: 14.0,
                     fontFamily: 'Avenir',
@@ -47,7 +50,10 @@ class CatComidaWidget extends StatelessWidget {
           ),
         ),
         onTap: () {
-          Navigator.pushNamed(context, this.ruta);
+          categoria.setCategoria(categoriaName);
+          categoria.setCatCode(catCode);
+          print(categoria.getCategoria());
+          Navigator.pushNamed(context, this.ruta, arguments: categoria);
 
           // final route = MaterialPageRoute(builder: (context) => AlertPage());
           // Navigator.push(context, route);

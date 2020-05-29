@@ -21,16 +21,17 @@ class Restaurante {
   String tags;
   String calf;
   String horario;
+  String catCode;
 
-  Restaurante({
-    this.categoria,
-    this.portada,
-    this.logo,
-    this.nombre,
-    this.tags,
-    this.calf,
-    this.horario,
-  });
+  Restaurante(
+      {this.categoria,
+      this.portada,
+      this.logo,
+      this.nombre,
+      this.tags,
+      this.calf,
+      this.horario,
+      this.catCode});
 
   Restaurante.fromJsonMap(Map<String, dynamic> json) {
     categoria = json['categoria'];
@@ -40,6 +41,7 @@ class Restaurante {
     tags = json['tags'];
     calf = json['calf'];
     horario = json['horario'];
+    catCode = json['catCode'];
   }
 
   getCategoria() {
@@ -60,7 +62,7 @@ class Restaurante {
 
   getLogo() {
     if (nombre == null) {
-      return 'assets/img/sinimagen.jpg';
+      return '';
     } else {
       return 'assets/img/$logo';
     }
@@ -95,6 +97,14 @@ class Restaurante {
       return 'sin horario';
     } else {
       return '$horario';
+    }
+  }
+
+  getCatCode() {
+    if (catCode == null) {
+      return '0';
+    } else {
+      return '$catCode';
     }
   }
 }
