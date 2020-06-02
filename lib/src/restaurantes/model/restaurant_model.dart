@@ -45,7 +45,7 @@ class Restaurante {
   }
 
   getCategoria() {
-    if (nombre == null) {
+    if (categoria == null) {
       return 'Restaurant sin categoria';
     } else {
       return '$categoria';
@@ -53,15 +53,15 @@ class Restaurante {
   }
 
   getPortada() {
-    if (nombre == null) {
-      return 'assets/img/sinimagen.jpg';
+    if (portada == null) {
+      return 'assets/img/default.png';
     } else {
       return 'assets/img/$portada';
     }
   }
 
   getLogo() {
-    if (nombre == null) {
+    if (logo == null) {
       return '';
     } else {
       return 'assets/img/$logo';
@@ -77,7 +77,7 @@ class Restaurante {
   }
 
   getTags() {
-    if (nombre == null) {
+    if (tags == null) {
       return '';
     } else {
       return '$tags';
@@ -85,7 +85,7 @@ class Restaurante {
   }
 
   getCalf() {
-    if (nombre == null) {
+    if (calf == null) {
       return '5.0';
     } else {
       return '$calf';
@@ -93,7 +93,7 @@ class Restaurante {
   }
 
   getHorario() {
-    if (nombre == null) {
+    if (horario == null) {
       return 'sin horario';
     } else {
       return '$horario';

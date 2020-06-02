@@ -1,33 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_pago_app/src/model/restaurant_model.dart';
+import 'package:taxi_pago_app/src/restaurantes/model/restaurant_model.dart';
 
-import '../../../bottom_icons_icons.dart';
+import '../../../../bottom_icons_icons.dart';
 
-class SliverListRestaurantes extends StatelessWidget {
-  final List<Restaurante> restaurantes;
-  String catCode = '0';
+class CardRestaurnteWidget extends StatelessWidget {
+  Restaurante restaurante = new Restaurante();
 
-  SliverListRestaurantes({@required this.restaurantes, this.catCode});
+  CardRestaurnteWidget(this.restaurante);
 
   @override
   Widget build(BuildContext context) {
-    return SliverList(
-        delegate: SliverChildListDelegate(_listaRestaurantes(this.catCode)));
-
-    /*  Container(
-      child: Column(children: <Widget>[
-        Text(restaurantes[1].getNombre()),
-      ]),
-    ); */
+    return _Card(context, restaurante);
   }
 
-  List<Widget> _listaRestaurantes(String catCode) {
-    final List<Widget> restaurantesList = [];
-    int i = 0;
-    restaurantes.forEach((opt) {
-      // aqui se desarrolla el widget que se estara repitiendo
-      if (catCode == restaurantes[i].getCatCode()) {
-        final widgetTemp = Container(
+  Widget _Card(BuildContext context, Restaurante restaurante) {
+    return InkWell(
+        child: Container(
           width: 340.0,
           height: 230,
           margin:
@@ -54,7 +42,7 @@ class SliverListRestaurantes extends StatelessWidget {
                       shape: BoxShape.rectangle,
                       image: DecorationImage(
                         fit: BoxFit.cover,
-                        image: AssetImage(restaurantes[i].getPortada()),
+                        image: AssetImage(restaurante.getPortada()),
                       ),
                     ),
                   ),
@@ -80,7 +68,7 @@ class SliverListRestaurantes extends StatelessWidget {
                         shape: BoxShape.circle,
                         image: DecorationImage(
                           fit: BoxFit.cover,
-                          image: AssetImage(restaurantes[i].getLogo()),
+                          image: AssetImage(restaurante.getLogo()),
                         ),
                       ),
                     ),
@@ -88,7 +76,7 @@ class SliverListRestaurantes extends StatelessWidget {
                       margin: EdgeInsets.only(top: 0.0, left: 5.0),
                       child: Column(children: <Widget>[
                         Text(
-                          restaurantes[i].getNombre(),
+                          restaurante.getNombre(),
                           textAlign: TextAlign.left,
                           style: TextStyle(
                               fontSize: 18.0,
@@ -97,7 +85,7 @@ class SliverListRestaurantes extends StatelessWidget {
                               color: Color(0xFF353b50)),
                         ),
                         Text(
-                          restaurantes[i].tags,
+                          restaurante.tags,
                           textAlign: TextAlign.left,
                           style: TextStyle(
                               fontSize: 12.0,
@@ -122,7 +110,7 @@ class SliverListRestaurantes extends StatelessWidget {
                           Container(
                             margin: EdgeInsets.only(top: 2.0, left: 10.0),
                             child: Text(
-                              restaurantes[i].calf,
+                              restaurante.calf,
                               style: TextStyle(
                                   fontSize: 15.0,
                                   fontFamily: 'Avenir',
@@ -144,7 +132,7 @@ class SliverListRestaurantes extends StatelessWidget {
                           Container(
                             margin: EdgeInsets.only(top: 2.0, left: 10.0),
                             child: Text(
-                              restaurantes[i].horario,
+                              restaurante.horario,
                               style: TextStyle(
                                   fontSize: 15.0,
                                   fontFamily: 'Avenir',
@@ -160,20 +148,17 @@ class SliverListRestaurantes extends StatelessWidget {
               )
             ],
           ),
-        );
+        ),
+        onTap: () {
+          print(restaurante.getHorario());
+          // categoria.setCategoria(categoriaName);
+          // categoria.setCatCode(catCode);
+          // print(categoria.getCategoria());
+          // Navigator.pushNamed(context, this.ruta, arguments: categoria);
+          Navigator.pushNamed(context, 'restaurante', arguments: restaurante);
 
-        // Text(restaurantes[i].getNombre(),
-        //     style: TextStyle(
-        //         fontSize: 20.0,
-        //         fontFamily: 'Avenir',
-        //         fontWeight: FontWeight.w600,
-        //         color: Color(0xFF353b50)));
-
-        restaurantesList.add(widgetTemp);
-      }
-
-      i++;
-    });
-    return restaurantesList;
+          // final route = MaterialPageRoute(builder: (context) => AlertPage());
+          // Navigator.push(context, route);
+        });
   }
 }

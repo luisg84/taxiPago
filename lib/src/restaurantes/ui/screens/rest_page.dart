@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_pago_app/src/model/categoria_model.dart';
-import 'package:taxi_pago_app/src/providers/res-list_provider.dart';
-import 'package:taxi_pago_app/src/providers/restaurantes_provider.dart';
-import 'package:taxi_pago_app/src/ui/widgets/recomendaciones_card_widget.dart';
-import 'package:taxi_pago_app/src/ui/widgets/sliver-list_restaurantes.dart';
-import 'package:taxi_pago_app/src/ui/widgets/topbar_widget.dart';
+import 'package:taxi_pago_app/src/restaurantes/model/categoria_model.dart';
+import 'package:taxi_pago_app/src/restaurantes/providers/res-list_provider.dart';
+import 'package:taxi_pago_app/src/restaurantes/providers/restaurantes_provider.dart';
+import 'package:taxi_pago_app/src/restaurantes/ui/widgets/recomendaciones_card_widget.dart';
+import 'package:taxi_pago_app/src/restaurantes/ui/widgets/sliver-list_restaurantes.dart';
+import 'package:taxi_pago_app/src/restaurantes/ui/widgets/topbar_widget.dart';
 
-class pizzaPage extends StatelessWidget {
+class restPage extends StatelessWidget {
   final restaurantesProvider = new RestaurantesProvider();
 
-  pizzaPage();
+  restPage();
 
   @override
   Widget build(BuildContext context) {
     final Categoria cat = ModalRoute.of(context).settings.arguments;
-    print(cat.getCategoria());
+
     return Scaffold(
-      body: _Barra(cat.getCategoria()),
+      body: _Barra(cat),
     );
   }
 
-  Widget _Barra(String categoriaName) {
+  Widget _Barra(Categoria categoria) {
     /*   resListProvider.cargarData().then((restaurantes) {
       print('_Lista');
       print(restaurantes);
@@ -32,6 +32,7 @@ class pizzaPage extends StatelessWidget {
           floating: true,
           pinned: true,
           primary: true,
+          centerTitle: false,
           actionsIconTheme: IconThemeData(color: Colors.black12),
           brightness: Brightness.light,
           backgroundColor: Color(0xFFFf9faf9),
@@ -39,10 +40,10 @@ class pizzaPage extends StatelessWidget {
           expandedHeight: 180.0,
           flexibleSpace: FlexibleSpaceBar(
             title: Container(
-              margin: EdgeInsets.only(right: 200.0),
+              margin: EdgeInsets.only(right: 150.0),
               child: Text(
-                categoriaName,
-                textAlign: TextAlign.left,
+                categoria.getCategoria(),
+                textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 14.0,
                     fontFamily: 'Avenir',
@@ -64,17 +65,20 @@ class pizzaPage extends StatelessWidget {
                 ]),
           ),
         ),
-        _Lista()
+        _Lista(categoria.getCatCode())
       ],
     );
   }
 
-  Widget _Lista() {
+  Widget _Lista(String catCode) {
     return FutureBuilder(
       future: restaurantesProvider.getRestaurantes(),
       builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
         if (snapshot.hasData) {
-          return SliverListRestaurantes(restaurantes: snapshot.data);
+          return SliverListRestaurantes(
+            restaurantes: snapshot.data,
+            catCode: catCode,
+          );
         } else {
           return SliverList(
               delegate: SliverChildListDelegate([

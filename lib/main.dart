@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:taxi_pago_app/src/routs/routs.dart';
 
-import 'src/ui/screens/home_page.dart';
+import 'src/restaurantes/ui/screens/home_page.dart';
 
 void main() => runApp(MyApp());
 

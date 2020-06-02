@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_pago_app/src/ui/widgets/recomendaciones_card_widget.dart';
+import 'package:taxi_pago_app/src/restaurantes/ui/widgets/recomendaciones_card_widget.dart';
 
 class CardSlideWidget extends StatelessWidget {
   @override

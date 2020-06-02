@@ -2,7 +2,7 @@
     "restaurantes": [
         {
             "categoria": "Restaurante",
-            "portada": "jaiva.jpg",
+            "portada": "portada-res.png",
             "logo": "logojaiva.jpg",
             "nombre": "La jaiba loca",
             "tags": "mariscos, Almuerzo.",
@@ -35,6 +35,26 @@
             "portada": "jaiva.jpg",
             "logo": "logojaiva.jpg",
             "nombre": "La jaiba loca2",
+            "tags": "mariscos, Almuerzo.",
+            "calf": "4.5",
+            "horario": "08:00-22:00",
+            "catCode": "6"
+        },
+        {
+            "categoria": "Restaurante",
+            "portada": "jaiva.jpg",
+            "logo": "logojaiva.jpg",
+            "nombre": "La jaiba locaUl",
+            "tags": "mariscos, Almuerzo.",
+            "calf": "4.5",
+            "horario": "08:00-22:00",
+            "catCode": "6"
+        },
+        {
+            "categoria": "Restaurante",
+            "portada": "jaiva.jpg",
+            "logo": "logojaiva.jpg",
+            "nombre": "La jaiba locaUl",
             "tags": "mariscos, Almuerzo.",
             "calf": "4.5",
             "horario": "08:00-22:00",

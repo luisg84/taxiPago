@@ -1,0 +1,52 @@
+{
+    "platillos": [
+        {
+            "nombre": "Mojarra Frita",
+            "foto": "coctel.png",
+            "tags": "Mariscos, Almuerzo",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan metus vel dui mollis fermentum. Phasellus ac commodo tellus, non congue leo. Donec in feugiat tortor. Quisque et arcu eget sapien viverra sagittis. Aenean in fermentum ex. Nullam laoreet, odio ac pellentesque varius, erat ligula faucibus justo, ut tempus nisl eros in .",
+            "precio": "150.00",
+            "restaurante": "La jaiva loca"
+        },
+        {
+            "nombre": "Mojarra Frita",
+            "foto": "mojarra.png",
+            "tags": "Mariscos, Almuerzo",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan metus vel dui mollis fermentum. Phasellus ac commodo tellus, non congue leo. Donec in feugiat tortor. Quisque et arcu eget sapien viverra sagittis. Aenean in fermentum ex. Nullam laoreet, odio ac pellentesque varius, erat ligula faucibus justo, ut tempus nisl eros in .",
+            "precio": "150.00",
+            "restaurante": "La jaiva loca"
+        },
+        {
+            "nombre": "Mojarra Frita",
+            "foto": "tostada_caso.png",
+            "tags": "Mariscos, Almuerzo",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan metus vel dui mollis fermentum. Phasellus ac commodo tellus, non congue leo. Donec in feugiat tortor. Quisque et arcu eget sapien viverra sagittis. Aenean in fermentum ex. Nullam laoreet, odio ac pellentesque varius, erat ligula faucibus justo, ut tempus nisl eros in .",
+            "precio": "150.00",
+            "restaurante": "La jaiva loca"
+        },
+        {
+            "nombre": "Mojarra Frita",
+            "foto": "coctel.png",
+            "tags": "Mariscos, Almuerzo",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan metus vel dui mollis fermentum. Phasellus ac commodo tellus, non congue leo. Donec in feugiat tortor. Quisque et arcu eget sapien viverra sagittis. Aenean in fermentum ex. Nullam laoreet, odio ac pellentesque varius, erat ligula faucibus justo, ut tempus nisl eros in .",
+            "precio": "150.00",
+            "restaurante": "La jaiva loca"
+        },
+        {
+            "nombre": "Mojarra Frita",
+            "foto": "mojarra.png",
+            "tags": "Mariscos, Almuerzo",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan metus vel dui mollis fermentum. Phasellus ac commodo tellus, non congue leo. Donec in feugiat tortor. Quisque et arcu eget sapien viverra sagittis. Aenean in fermentum ex. Nullam laoreet, odio ac pellentesque varius, erat ligula faucibus justo, ut tempus nisl eros in .",
+            "precio": "150.00",
+            "restaurante": "La jaiva loca"
+        },
+        {
+            "nombre": "Mojarra Frita",
+            "foto": "tostada_caso.png",
+            "tags": "Mariscos, Almuerzo",
+            "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan metus vel dui mollis fermentum. Phasellus ac commodo tellus, non congue leo. Donec in feugiat tortor. Quisque et arcu eget sapien viverra sagittis. Aenean in fermentum ex. Nullam laoreet, odio ac pellentesque varius, erat ligula faucibus justo, ut tempus nisl eros in .",
+            "precio": "150.00",
+            "restaurante": "La jaiva loca"
+        }
+    ]
+}

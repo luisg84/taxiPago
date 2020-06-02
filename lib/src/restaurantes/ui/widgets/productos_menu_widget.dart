@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_pago_app/src/ui/widgets/card_producto_widget.dart';
+import 'package:taxi_pago_app/src/restaurantes/ui/widgets/card_producto_widget.dart';
 
 class productosMenuWidget extends StatelessWidget {
   @override

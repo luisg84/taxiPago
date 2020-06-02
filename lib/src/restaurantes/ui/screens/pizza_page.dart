@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_pago_app/src/model/categoria_model.dart';
-import 'package:taxi_pago_app/src/providers/res-list_provider.dart';
-import 'package:taxi_pago_app/src/providers/restaurantes_provider.dart';
-import 'package:taxi_pago_app/src/ui/widgets/recomendaciones_card_widget.dart';
-import 'package:taxi_pago_app/src/ui/widgets/sliver-list_restaurantes.dart';
-import 'package:taxi_pago_app/src/ui/widgets/topbar_widget.dart';
+import 'package:taxi_pago_app/src/restaurantes/model/categoria_model.dart';
+import 'package:taxi_pago_app/src/restaurantes/providers/res-list_provider.dart';
+import 'package:taxi_pago_app/src/restaurantes/providers/restaurantes_provider.dart';
+import 'package:taxi_pago_app/src/restaurantes/ui/widgets/recomendaciones_card_widget.dart';
+import 'package:taxi_pago_app/src/restaurantes/ui/widgets/sliver-list_restaurantes.dart';
+import 'package:taxi_pago_app/src/restaurantes/ui/widgets/topbar_widget.dart';
 
-class restPage extends StatelessWidget {
+class pizzaPage extends StatelessWidget {
   final restaurantesProvider = new RestaurantesProvider();
 
-  restPage();
+  pizzaPage();
 
   @override
   Widget build(BuildContext context) {
     final Categoria cat = ModalRoute.of(context).settings.arguments;
-
+    print(cat.getCategoria());
     return Scaffold(
-      body: _Barra(cat),
+      body: _Barra(cat.getCategoria()),
     );
   }
 
-  Widget _Barra(Categoria categoria) {
+  Widget _Barra(String categoriaName) {
     /*   resListProvider.cargarData().then((restaurantes) {
       print('_Lista');
       print(restaurantes);
@@ -39,10 +39,10 @@ class restPage extends StatelessWidget {
           expandedHeight: 180.0,
           flexibleSpace: FlexibleSpaceBar(
             title: Container(
-              margin: EdgeInsets.only(right: 150.0),
+              margin: EdgeInsets.only(right: 200.0),
               child: Text(
-                categoria.getCategoria(),
-                textAlign: TextAlign.center,
+                categoriaName,
+                textAlign: TextAlign.left,
                 style: TextStyle(
                     fontSize: 14.0,
                     fontFamily: 'Avenir',
@@ -64,20 +64,17 @@ class restPage extends StatelessWidget {
                 ]),
           ),
         ),
-        _Lista(categoria.getCatCode())
+        _Lista()
       ],
     );
   }
 
-  Widget _Lista(String catCode) {
+  Widget _Lista() {
     return FutureBuilder(
       future: restaurantesProvider.getRestaurantes(),
       builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
         if (snapshot.hasData) {
-          return SliverListRestaurantes(
-            restaurantes: snapshot.data,
-            catCode: catCode,
-          );
+          return SliverListRestaurantes(restaurantes: snapshot.data);
         } else {
           return SliverList(
               delegate: SliverChildListDelegate([

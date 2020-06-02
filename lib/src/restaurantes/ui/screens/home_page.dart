@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_pago_app/src/ui/widgets/avatar_home_widget.dart';
-import 'package:taxi_pago_app/src/ui/widgets/card_slide_widget.dart';
-import 'package:taxi_pago_app/src/ui/widgets/comida_menu_widget.dart';
-import 'package:taxi_pago_app/src/ui/widgets/productos_menu_widget.dart';
+import 'package:taxi_pago_app/src/restaurantes/ui/widgets/avatar_home_widget.dart';
+import 'package:taxi_pago_app/src/restaurantes/ui/widgets/card_slide_widget.dart';
+import 'package:taxi_pago_app/src/restaurantes/ui/widgets/comida_menu_widget.dart';
+import 'package:taxi_pago_app/src/restaurantes/ui/widgets/productos_menu_widget.dart';
 
 class HomePage extends StatelessWidget {
   @override

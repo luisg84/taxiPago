@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_pago_app/src/ui/screens/home_page.dart';
+import 'package:taxi_pago_app/src/restaurantes/ui/screens/home_page.dart';
 
-import '../../../bottom_icons_icons.dart';
+import '../../../../bottom_icons_icons.dart';
 
 class NavigationBar extends StatefulWidget {
   @override

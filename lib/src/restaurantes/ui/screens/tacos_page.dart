@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_pago_app/src/ui/screens/home_page.dart';
+import 'package:taxi_pago_app/src/restaurantes/ui/screens/home_page.dart';
 
 class tacosPage extends StatelessWidget {
   @override

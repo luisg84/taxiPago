@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_pago_app/src/model/categoria_model.dart';
+import 'package:taxi_pago_app/src/restaurantes/model/categoria_model.dart';
 
 class CatComidaWidget extends StatelessWidget {
   String pathImage = 'assets/img/recomendacion_desayuno.png';
