@@ -61,12 +61,16 @@ flutter:
    - assets/img/tacotaco.jpg
    - assets/img/logotacos.jpg
    - assets/img/portada-res.png
+   - assets/img/map.png
+   - assets/img/taxista.png
    - assets/img/default.png
    - assets/img/coctel.png
    - assets/img/mojarra.png
    - assets/img/tostada_caso.png
    - data/res_list.json
    - data/platillo-list.json
+   - data/pedido-list.json
+   - data/taxista-data.json
   #  - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

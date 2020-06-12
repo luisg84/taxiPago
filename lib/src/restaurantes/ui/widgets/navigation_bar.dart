@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:taxi_pago_app/src/caja/ui/screens/caja_page.dart';
+import 'package:taxi_pago_app/src/pedidos/ui/screens/pedidos-home_page.dart';
 import 'package:taxi_pago_app/src/restaurantes/ui/screens/home_page.dart';
+import 'package:taxi_pago_app/src/usuario/ui/screens/usuario_page.dart';
 
 import '../../../../bottom_icons_icons.dart';
 
@@ -11,7 +14,12 @@ class NavigationBar extends StatefulWidget {
 class _NavigationBarState extends State<NavigationBar> {
   int indexTap = 0;
 
-  final List<Widget> widgetsChildren = [HomePage()];
+  final List<Widget> widgetsChildren = [
+    HomePage(),
+    PedidosHomePage(),
+    CajaPage(),
+    UsuarioPage()
+  ];
 
   void onTapTapped(int index) {
     setState(() {

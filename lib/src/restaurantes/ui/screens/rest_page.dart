@@ -57,7 +57,7 @@ class restPage extends StatelessWidget {
                   /*   SafeArea(child: Container(height: 5)), */
                   Container(
                     margin: EdgeInsets.only(top: 0),
-                    child: topBarWidget(),
+                    child: topBarWidget('/'),
                   ),
                   SizedBox(
                     height: 50.0,
@@ -112,6 +112,7 @@ class restPage extends StatelessWidget {
 
   List<Widget> _Restaurantes(List<dynamic> data) {
     final List<Widget> restaurantesList = [];
+    print(data);
 
     data.forEach((opt) {
       final widgetTemp = ListTile(

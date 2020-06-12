@@ -16,10 +16,10 @@ class SliverListPlatillos extends StatelessWidget {
   List<Widget> _listaPlatillos(BuildContext context) {
     final List<Widget> platillosList = [];
     int i = 0;
-
+    // print('ejecuta esliver list platillos');
     platillos.forEach((opt) {
       final widgetTemp = PlatilloCardWidget(platillo: platillos[i]);
-      print(platillos[i].getNombre());
+
       platillosList.add(widgetTemp);
       i++;
     });

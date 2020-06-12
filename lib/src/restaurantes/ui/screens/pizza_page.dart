@@ -56,7 +56,7 @@ class pizzaPage extends StatelessWidget {
                   /*   SafeArea(child: Container(height: 5)), */
                   Container(
                     margin: EdgeInsets.only(top: 0),
-                    child: topBarWidget(),
+                    child: topBarWidget('/'),
                   ),
                   SizedBox(
                     height: 50.0,

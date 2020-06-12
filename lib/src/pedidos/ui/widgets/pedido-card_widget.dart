@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_pago_app/src/platillos/model/platillos_model.dart';
+import 'package:taxi_pago_app/src/pedidos/model/pedidos_model.dart';
 
-class PlatilloCardWidget extends StatelessWidget {
-  Platillo platillo = new Platillo();
+import '../../../../bottom_icons_icons.dart';
 
-  PlatilloCardWidget({@required this.platillo});
+class PedidoCardWidget extends StatelessWidget {
+  Pedido pedido = new Pedido();
+
+  PedidoCardWidget({@required this.pedido});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,7 @@ class PlatilloCardWidget extends StatelessWidget {
           height: 139,
           margin: EdgeInsets.only(top: 15.0, left: 15.0, right: 15.0),
           decoration: BoxDecoration(
-            color: Color(0xFFF4F2F2),
+            color: Color(_SelectColor(Pedido().getEstatus())),
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
           ),
           child: Row(
@@ -26,6 +28,7 @@ class PlatilloCardWidget extends StatelessWidget {
                 width: 100.0,
                 height: 100.0,
                 decoration: BoxDecoration(
+                  color: Color(0xFFFFFFFF),
                   boxShadow: <BoxShadow>[
                     BoxShadow(
                         color: Color.fromARGB(82, 0, 0, 0),
@@ -34,10 +37,10 @@ class PlatilloCardWidget extends StatelessWidget {
                   ],
                   borderRadius: BorderRadius.all(Radius.circular(10.0)),
                   shape: BoxShape.rectangle,
-                  image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage(platillo.getFoto()),
-                  ),
+                ),
+                child: Center(
+                  child: Icon(BottomIcons.shopping_basket_solid,
+                      color: Color(0xFF62B448)),
                 ),
               ),
               Container(
@@ -47,7 +50,7 @@ class PlatilloCardWidget extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text(
-                        platillo.getNombre(),
+                        pedido.getNumero(),
                         textAlign: TextAlign.left,
                         style: TextStyle(
                             fontSize: 16.0,
@@ -55,12 +58,12 @@ class PlatilloCardWidget extends StatelessWidget {
                             fontWeight: FontWeight.w600,
                             color: Color(0xFF353b50)),
                       ),
-                      Text(platillo.getTags()),
+                      Text(pedido.getEstatus()),
                       SizedBox(
                         height: 20.0,
                       ),
                       Text(
-                        platillo.getPrecio(),
+                        pedido.getTotal(),
                         style: TextStyle(
                             fontSize: 18.0,
                             fontFamily: 'Avenir',
@@ -72,8 +75,22 @@ class PlatilloCardWidget extends StatelessWidget {
             ],
           )),
       onTap: () {
-        Navigator.pushNamed(context, 'detalleplatillo', arguments: platillo);
+        // Contenido contenido = new Contenido();
+        // contenido = pedido.getContenido();
+        // print(contenido.getNombre());
+        print(pedido.getEstatus());
+        Navigator.pushNamed(context, 'contenidopedido', arguments: pedido);
       },
     );
+  }
+
+  int _SelectColor(String status) {
+    if (status == 'Entregado') {
+      print('Naranja');
+      return 0xFFFAAD2E;
+    } else {
+      print('Normal');
+      return 0xFFF4F2F2;
+    }
   }
 }

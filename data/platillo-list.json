@@ -1,7 +1,7 @@
 {
     "platillos": [
         {
-            "nombre": "Mojarra Frita",
+            "nombre": "Coctel de camarones",
             "foto": "coctel.png",
             "tags": "Mariscos, Almuerzo",
             "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan metus vel dui mollis fermentum. Phasellus ac commodo tellus, non congue leo. Donec in feugiat tortor. Quisque et arcu eget sapien viverra sagittis. Aenean in fermentum ex. Nullam laoreet, odio ac pellentesque varius, erat ligula faucibus justo, ut tempus nisl eros in .",
@@ -17,7 +17,7 @@
             "restaurante": "La jaiva loca"
         },
         {
-            "nombre": "Mojarra Frita",
+            "nombre": "Tostadas de Cazon",
             "foto": "tostada_caso.png",
             "tags": "Mariscos, Almuerzo",
             "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan metus vel dui mollis fermentum. Phasellus ac commodo tellus, non congue leo. Donec in feugiat tortor. Quisque et arcu eget sapien viverra sagittis. Aenean in fermentum ex. Nullam laoreet, odio ac pellentesque varius, erat ligula faucibus justo, ut tempus nisl eros in .",
@@ -25,7 +25,7 @@
             "restaurante": "La jaiva loca"
         },
         {
-            "nombre": "Mojarra Frita",
+            "nombre": "octel de camarones",
             "foto": "coctel.png",
             "tags": "Mariscos, Almuerzo",
             "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan metus vel dui mollis fermentum. Phasellus ac commodo tellus, non congue leo. Donec in feugiat tortor. Quisque et arcu eget sapien viverra sagittis. Aenean in fermentum ex. Nullam laoreet, odio ac pellentesque varius, erat ligula faucibus justo, ut tempus nisl eros in .",
@@ -41,7 +41,7 @@
             "restaurante": "La jaiva loca"
         },
         {
-            "nombre": "Mojarra Frita",
+            "nombre": "Tostadas de Cazón",
             "foto": "tostada_caso.png",
             "tags": "Mariscos, Almuerzo",
             "descripcion": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan metus vel dui mollis fermentum. Phasellus ac commodo tellus, non congue leo. Donec in feugiat tortor. Quisque et arcu eget sapien viverra sagittis. Aenean in fermentum ex. Nullam laoreet, odio ac pellentesque varius, erat ligula faucibus justo, ut tempus nisl eros in .",

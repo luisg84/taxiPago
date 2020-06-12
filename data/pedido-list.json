@@ -1,0 +1,60 @@
+{
+    "pedidos": [
+        {
+            "id": "001",
+            "numero": "1",
+            "estatus": "En camino",
+            "contenido": [
+                {
+                    "nombre": "Mojarra frita",
+                    "tags": "Mariscos, Almuerzo",
+                    "foto": "mojarra.png",
+                    "precio": "150"
+                }
+            ],
+            "total": "300.0"
+        },
+        {
+            "id": "001",
+            "numero": "2",
+            "estatus": "En camino",
+            "contenido": [
+                {
+                    "nombre": "Mojarra frita",
+                    "tags": "Mariscos, Almuerzo",
+                    "foto": "mojarra.png",
+                    "precio": "150"
+                }
+            ],
+            "total": "300.0"
+        },
+        {
+            "id": "001",
+            "numero": "3",
+            "estatus": "En camino",
+            "contenido": [
+                {
+                    "nombre": "Mojarra frita",
+                    "tags": "Mariscos, Almuerzo",
+                    "foto": "mojarra.png",
+                    "precio": "150"
+                }
+            ],
+            "total": "300.0"
+        },
+        {
+            "id": "001",
+            "numero": "4",
+            "estatus": "Entregado",
+            "contenido": [
+                {
+                    "nombre": "Mojarra frita",
+                    "tags": "Mariscos, Almuerzo",
+                    "foto": "mojarra.png",
+                    "precio": "150"
+                }
+            ],
+            "total": "300.0"
+        }
+    ]
+}

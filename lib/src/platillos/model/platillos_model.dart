@@ -72,10 +72,10 @@ class Platillo {
   }
 
   getPrecio() {
-    if (tags == null) {
+    if (precio == null) {
       return 'Precio no asignado';
     } else {
-      return ' $precio.00';
+      return ' $precio';
     }
   }
 }

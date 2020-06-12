@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 import 'avatar_home_widget.dart';
 
 class topBarWidget extends StatelessWidget {
+  String path = '/';
+
+  topBarWidget(this.path);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -29,7 +33,7 @@ class topBarWidget extends StatelessWidget {
                   color: Color(0xFF353b50)),
             ),
             onTap: () {
-              Navigator.pushNamed(context, '/');
+              Navigator.pushNamed(context, path);
 
               // final route = MaterialPageRoute(builder: (context) => AlertPage());
               // Navigator.push(context, route);

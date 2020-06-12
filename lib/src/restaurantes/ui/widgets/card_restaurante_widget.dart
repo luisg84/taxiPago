@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:taxi_pago_app/src/platillos/providers/platillos_provider.dart';
 import 'package:taxi_pago_app/src/restaurantes/model/restaurant_model.dart';
 
 import '../../../../bottom_icons_icons.dart';
 
 class CardRestaurnteWidget extends StatelessWidget {
+  final platillosProvider = new PlatillosProvider();
   Restaurante restaurante = new Restaurante();
 
   CardRestaurnteWidget(this.restaurante);
@@ -150,6 +152,7 @@ class CardRestaurnteWidget extends StatelessWidget {
           ),
         ),
         onTap: () {
+          // platillosProvider.getPlatillos();
           print(restaurante.getHorario());
           // categoria.setCategoria(categoriaName);
           // categoria.setCatCode(catCode);
